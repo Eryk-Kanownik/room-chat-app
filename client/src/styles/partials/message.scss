@@ -1,0 +1,21 @@
+.message {
+  align-content: flex-start;
+  background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(26, 26, 26));
+  color: rgb(226, 226, 226);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px black;
+  position: relative;
+  transform-origin: left;
+
+  animation: animate-message 0.2s forwards;
+}
+
+@keyframes animate-message {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

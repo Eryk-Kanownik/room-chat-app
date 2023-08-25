@@ -1,0 +1,98 @@
+$chat-theme: rgb(28, 28, 28);
+$chat-theme-dark: rgb(15, 15, 15);
+
+.chat-room-page {
+  min-height: 100vh;
+  background: $chat-theme;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  overflow: hidden;
+  &__left {
+    height: 100vh;
+    width: 180px;
+    overflow-y: scroll;
+    &__users {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: $chat-theme-dark;
+      border-left: solid 1px $chat-theme-dark;
+      border-right: solid 1px $chat-theme-dark;
+      &__header {
+        padding: 0.7rem 0.7rem 0.7rem 1rem;
+        background-color: rgb(21, 21, 21);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        gap: 2rem;
+      }
+    }
+  }
+  &__right {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    overflow-y: scroll;
+    &__header {
+      position: sticky;
+      background: $chat-theme-dark;
+      color: white;
+      z-index: 1;
+      padding: 1rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      &__h1 {
+        font-size: 3rem;
+      }
+      &__p {
+        font-size: 1rem;
+      }
+    }
+
+    &__messages {
+      background: linear-gradient(to bottom, rgb(41, 41, 41), rgb(7, 7, 7));
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 1rem 1rem 1rem;
+    }
+
+    &__form {
+      position: sticky;
+      bottom: 0;
+      padding: 1rem;
+      right: 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      background: $chat-theme-dark;
+      input {
+        background-color: rgb(37, 37, 37);
+        color: white;
+        border-radius: 0;
+        padding: 1rem;
+        font-size: 1.2rem;
+        border-radius: 5px 0 0 5px;
+      }
+      button {
+        border-radius: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1rem;
+        font-size: 2rem;
+        color: white;
+        background-color: rgb(27, 27, 27);
+        border: none;
+        border-radius: 0 5px 5px 0;
+        transition-duration: 0.2s;
+        &:hover {
+          background: $roomspage-bg-color;
+        }
+      }
+    }
+  }
+}

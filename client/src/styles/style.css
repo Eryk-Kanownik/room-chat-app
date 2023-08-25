@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.navbar__content {
+  background: rgb(22, 21, 21);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.navbar__content__logo {
+  cursor: pointer;
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(106, 0, 235), rgb(160, 2, 144));
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+  transition-duration: 0.2s;
+}
+.navbar__content__logo::before {
+  content: "";
+  background-color: white;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transform-origin: center center;
+  transition-duration: 0.2s;
+  transform: scale(0, 0);
+}
+.navbar__content__logo:hover {
+  box-shadow: 0 2px 10px black;
+}
+.navbar__content__logo:hover::before {
+  transform: scale(1, 1);
+}
+.navbar__content__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.navbar__content__links__item {
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 70px;
+  width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgb(36, 36, 114), rgb(28, 28, 69));
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+  transition-duration: 0.2s;
+}
+.navbar__content__links__item::before {
+  content: "";
+  background-color: white;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transform-origin: center center;
+  transition-duration: 0.2s;
+  transform: scale(0, 0);
+}
+.navbar__content__links__item:hover {
+  box-shadow: 0 2px 10px black;
+}
+.navbar__content__links__item:hover::before {
+  transform: scale(1, 1);
+}
+.roomspage {
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgb(235, 69, 69), rgb(56, 56, 205));
+  padding: 1rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  color: rgb(255, 255, 255);
+  min-height: 100vh;
+}
+.roomspage__header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.roomspage__header__h1 {
+  font-size: 3rem;
+}
+.roomspage__header__wrapper {
+  background-color: white;
+  border: solid 1px rgb(120, 120, 120);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+.roomspage__header__wrapper__input {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: rgba(255, 0, 0, 0);
+}
+.roomspage__header__wrapper__btn {
+  border-left: none !important;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition-duration: 0.2s;
+}
+.roomspage__header__wrapper__btn:hover {
+  background-color: black;
+  color: white;
+}
+.roomspage__rooms__items {
+  display: flex;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.chat-room-page {
+  min-height: 100vh;
+  background: rgb(28, 28, 28);
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  overflow: hidden;
+}
+.chat-room-page__left {
+  height: 100vh;
+  width: 180px;
+  overflow-y: scroll;
+}
+.chat-room-page__left__users {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(15, 15, 15);
+  border-left: solid 1px rgb(15, 15, 15);
+  border-right: solid 1px rgb(15, 15, 15);
+}
+.chat-room-page__left__users__header {
+  padding: 0.7rem 0.7rem 0.7rem 1rem;
+  background-color: rgb(21, 21, 21);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  gap: 2rem;
+}
+.chat-room-page__right {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.chat-room-page__right__header {
+  position: sticky;
+  background: rgb(15, 15, 15);
+  color: white;
+  z-index: 1;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.chat-room-page__right__header__h1 {
+  font-size: 3rem;
+}
+.chat-room-page__right__header__p {
+  font-size: 1rem;
+}
+.chat-room-page__right__messages {
+  background: linear-gradient(to bottom, rgb(41, 41, 41), rgb(7, 7, 7));
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.chat-room-page__right__form {
+  position: sticky;
+  bottom: 0;
+  padding: 1rem;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  background: rgb(15, 15, 15);
+}
+.chat-room-page__right__form input {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  border-radius: 0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px 0 0 5px;
+}
+.chat-room-page__right__form button {
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: white;
+  background-color: rgb(27, 27, 27);
+  border: none;
+  border-radius: 0 5px 5px 0;
+  transition-duration: 0.2s;
+}
+.chat-room-page__right__form button:hover {
+  background: linear-gradient(to bottom, rgb(235, 69, 69), rgb(56, 56, 205));
+}
+
+.room {
+  height: 200px;
+  width: 300px;
+  background: linear-gradient(to right, rgb(202, 115, 115), rgb(100, 100, 162));
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  background-size: 200%;
+  background-position: 0;
+  transition-duration: 0.2s;
+  color: white;
+}
+.room__roomname {
+  font-size: 2rem;
+}
+.room__wrapper {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+.room__wrapper__online {
+  position: relative;
+  margin-left: 10px;
+}
+.room__wrapper__online::before {
+  border-radius: 5px;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: green;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.room__locked {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+.room:hover {
+  transform: scale(1.1);
+  background-position: 100% !important;
+  box-shadow: 0 0 5px rgb(93, 93, 93);
+}
+
+.create-room {
+  overflow: hidden;
+  height: 200px;
+  width: 300px;
+  padding: 1rem;
+  background: linear-gradient(-45deg, rgb(202, 115, 115), rgb(100, 100, 162));
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  background-size: 200%;
+  background-position: 0;
+  transition-duration: 0.2s;
+}
+.create-room:hover {
+  transform: scale(1.1);
+  background-position: 100% !important;
+}
+.create-room:hover {
+  transform: scale(1.1);
+}
+.create-room__plus {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  font-size: 6rem;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+.create-room__h1 {
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+}
+
+.dialog {
+  background: rgb(22, 21, 21);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.dialog__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50vw;
+}
+.dialog__content__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.dialog__content__header__close {
+  transition-duration: 0.2s;
+}
+.dialog__content__header__close:hover {
+  color: gray;
+}
+.dialog__content__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.dialog__content__description textarea {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.dialog__content__roomname {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.dialog__content__roomname input {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.dialog__content__checkbox {
+  display: flex;
+  gap: 0.5rem;
+}
+.dialog__content__password {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.dialog__content__password input {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.dialog__content__submit {
+  padding: 1rem !important;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(to bottom, rgb(0, 255, 136), rgb(0, 0, 0));
+  background-size: 100% 1000%;
+  background-position: center top;
+  transition-duration: 0.2s;
+}
+.dialog__content__submit:hover {
+  background-position: center bottom;
+  color: white;
+}
+
+.message {
+  align-content: flex-start;
+  background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(26, 26, 26));
+  color: rgb(226, 226, 226);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px black;
+  position: relative;
+  transform-origin: left;
+  animation: animate-message 0.2s forwards;
+}
+
+@keyframes animate-message {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(28, 28, 28);
+  padding: 0.7rem 1rem;
+  color: white;
+}
+.user-card__dot div {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 5px;
+}
+.user-card:hover {
+  background-color: rgb(23, 23, 23);
+  cursor: pointer;
+}
+
+.password-screen {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+dialog::backdrop {
+  background-color: rgba(14, 14, 14, 0.451);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.input {
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+/*# sourceMappingURL=style.css.map */

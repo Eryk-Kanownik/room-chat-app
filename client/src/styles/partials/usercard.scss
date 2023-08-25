@@ -1,0 +1,22 @@
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(28, 28, 28);
+  padding: 0.7rem 1rem;
+  color: white;
+  &__username {
+  }
+  &__dot {
+    div {
+      width: 10px;
+      height: 10px;
+      background-color: green;
+      border-radius: 5px;
+    }
+  }
+  &:hover {
+    background-color: rgb(23, 23, 23);
+    cursor: pointer;
+  }
+}

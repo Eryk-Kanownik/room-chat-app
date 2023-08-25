@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$chat-theme: rgb(22, 21, 21);
+
+@import "./partials/navbar.scss";
+@import "./partials/roomspage.scss";
+@import "./partials/chatroompage.scss";
+@import "./partials/room.scss";
+@import "./partials/message.scss";
+@import "./partials/usercard.scss";
+@import "./partials/passwordscreen.scss";
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+dialog::backdrop {
+  background-color: rgba(14, 14, 14, 0.451);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.input {
+  padding: 0.4rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
